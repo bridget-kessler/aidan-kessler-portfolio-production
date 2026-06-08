@@ -129,8 +129,15 @@ ol {
 header {
   max-width: 1620px;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .container,
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 main {
