@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+
+# Sitemaps
+
+Sitemap: https://www.aidankessler.com/sitemap.xml
