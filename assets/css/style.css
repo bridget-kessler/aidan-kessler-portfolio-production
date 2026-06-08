@@ -64,7 +64,6 @@ header > .flex {
   gap: 20px;
 }
 header a.site-logo {
-  font-size: clamp(1.75rem, 2vw, 2.25rem);
   gap: 15px;
   font-weight: 500;
 }
