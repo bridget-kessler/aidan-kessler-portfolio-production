@@ -1,0 +1,29 @@
+$colors: (
+  "red": #e5423b,
+);
+$gap: (
+  "100": 2px,
+  "200": 5px,
+  "300": 10px,
+  "400": 15px,
+  "500": 20px,
+  "600": 30px,
+  "700": 60px,
+  "800": 90px,
+  "900": 120px,
+  "1000": 160px,
+);
+$base: #fcf9f8;
+$base-2: #f6f1f1;
+$base-3: #e4dcdc;
+$contrast: #12080c;
+$contrast-2: #1e1418;
+$contrast-3: #2a2124;
+$max-page-width: 1620px;
+$border-radius: 5px;
+$focus-outline: 3px solid magenta;
+$sans-serif: "Inter", sans-serif;
+$font-sm: clamp(.9rem, 1.75vw, 1rem);
+$font-nm: 1rem;
+$font-md: clamp(1.75rem, 2vw, 2.25rem);
+$font-lg: clamp(2.25rem, 2.5vw, 2.75rem);
