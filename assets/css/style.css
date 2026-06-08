@@ -64,7 +64,7 @@ header > .flex {
   gap: 20px;
 }
 header a.site-logo {
-  font-size: 1rem;
+  font-size: clamp(1.75rem, 2vw, 2.25rem);
   gap: 15px;
   font-weight: 500;
 }
@@ -141,6 +141,7 @@ header {
 }
 
 main {
+  min-height: 70vh;
   animation: slideUp 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -179,28 +180,37 @@ main {
 .font--sm {
   font-size: clamp(0.9rem, 1.75vw, 1rem);
 }
-.font--nm {
-  font-size: 1rem;
+.font--rg {
+  font-size: clamp(1.75rem, 2vw, 2.25rem);
 }
 
 .font--md,
 h2 {
-  font-size: clamp(1.75rem, 2vw, 2.25rem);
+  font-size: clamp(2.25rem, 2.25vw, 2.5rem);
   padding-bottom: 0.5em;
 }
 
 .font--lg,
 h1 {
-  font-size: clamp(2.25rem, 2.5vw, 2.75rem);
+  font-size: clamp(2.5rem, 2.75vw, 3rem);
   padding-bottom: 0.5em;
   font-weight: 500;
 }
 
-.font--lg, .font--md, h1, h2, h3 {
+.font--lg,
+.font--md,
+h1,
+h2,
+h3 {
   font-weight: 500;
 }
 
-h1, h2, h3, h4, p, dl {
+h1,
+h2,
+h3,
+h4,
+p,
+dl {
   line-height: 1.5em;
 }
 
@@ -226,7 +236,6 @@ img {
   }
 }
 img {
-  background-color: #bfbfbf;
   opacity: 0;
   transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -295,7 +304,7 @@ img.visible {
   color: #fcf9f8;
   text-decoration: none;
   z-index: 1;
-  text-shadow: 0 0 3cap rgb(18, 8, 12);
+  text-shadow: 0 0 50px rgb(18, 8, 12);
 }
 .card--project .content-block {
   max-width: 60rem;
@@ -313,6 +322,7 @@ img.visible {
 }
 .card--large a {
   z-index: 1;
+  font-weight: 500;
 }
 .card--large img {
   transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -327,7 +337,6 @@ img.visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(18, 8, 12, 0.75) 0%, rgba(18, 8, 12, 0.15) 100%);
 }
 
 p + p {
@@ -368,13 +377,22 @@ footer .container {
 }
 
 .home .grid li:nth-child(1) .card {
-  background-color: #c0785f;
+  background-color: hsl(15, 43%, 56%);
+}
+.home .grid li:nth-child(1) .card::after {
+  background: linear-gradient(0deg, hsla(15, 44%, 16%, 0.8) 0%, hsla(15, 44%, 16%, 0.2) 100%);
 }
 .home .grid li:nth-child(2) .card {
   background-color: #f59c00;
 }
+.home .grid li:nth-child(2) .card::after {
+  background: linear-gradient(0deg, hsla(11, 79%, 22%, 0.8) 0%, hsla(11, 79%, 22%, 0.2) 100%);
+}
 .home .grid li:nth-child(3) .card {
   background-color: #a4b9aa;
+}
+.home .grid li:nth-child(3) .card::after {
+  background: linear-gradient(0deg, rgba(32, 46, 23, 0.8) 0%, rgba(32, 46, 23, 0.2) 100%);
 }
 
 .gamedev h2 {
@@ -385,4 +403,18 @@ footer .container {
 }
 .gamedev .gallery {
   gap: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
 }
